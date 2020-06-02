@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="BasbBallOOP"/>
+	<classpathentry kind="src" path="SortingClassOOP"/>
+	<classpathentry kind="src" path="Java_OOP1"/>
+	<classpathentry kind="src" path="Java_OOP2"/>
+	<classpathentry kind="src" path="OOP_Work"/>
+	<classpathentry kind="src" path="OOP_Work2"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
