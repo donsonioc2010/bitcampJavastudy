@@ -6,6 +6,7 @@ public class Pitcher extends Human {
 	private int lose;
 	private double defence; //0.0~10.0
 	
+	
 	public int getWin() {
 		return win;
 	}

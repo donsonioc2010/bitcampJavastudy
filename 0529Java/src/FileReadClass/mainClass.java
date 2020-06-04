@@ -12,7 +12,6 @@ public class mainClass {
 	{
 		//file read
 		File file = new File("d:/tmp/test.txt");
-
 		try {
 			FileReader fr = new FileReader(file);
 			

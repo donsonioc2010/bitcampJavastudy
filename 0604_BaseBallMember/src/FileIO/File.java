@@ -6,6 +6,7 @@ import dao.MemberDao;
 import dto.Human;
 
 public class File  {
+	
 	public void dataWrite() {
 		
 	}

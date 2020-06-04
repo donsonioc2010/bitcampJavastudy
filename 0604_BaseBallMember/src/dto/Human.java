@@ -9,6 +9,7 @@ public class Human {
 	private double height;
 	Human pit;
 	Human bat;
+	
 	public Human() {
 
 	}

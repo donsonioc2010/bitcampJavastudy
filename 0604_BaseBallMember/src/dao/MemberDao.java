@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import dto.Human;
 
+
 //Data Access Object == BackEnd
 public class MemberDao {
 	Scanner sc = new Scanner(System.in);
@@ -14,6 +15,7 @@ public class MemberDao {
 		for(int i =0;i<infoh.length;i++) {
 			infoh[i] = new Human();
 			infoh[i].setName("");
+			
 		}
 	}
 	

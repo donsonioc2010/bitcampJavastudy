@@ -5,6 +5,7 @@ public class Batter extends Human {
 	private int batcount; //타수
 	private int hit;
 	private double hitAvg; //타율 0.0~1.0
+	
 	public int getBatcount() {
 		return batcount;
 	}
