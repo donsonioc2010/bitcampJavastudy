@@ -28,6 +28,7 @@ public class Human {
 			((Pitcher) pit).setDefence(c);
 		}else {
 			bat = new Batter();
+			
 			((Batter) bat).setBatcount(a);
 			((Batter) bat).setHit(b);
 			((Batter) bat).setHitAvg(c);
@@ -35,6 +36,7 @@ public class Human {
 	}
 	public int getNumber() {
 		return number;
+		
 	}
 	public void setNumber(int number) {
 		this.number = number;
@@ -57,7 +59,23 @@ public class Human {
 	public void setHeight(double height) {
 		this.height = height;
 	}
-
+	public String getinfo() {
+		String str="";
+		if(type ==1) {
+			int a = ((Pitcher) pit).getWin();
+			int b = ((Pitcher) pit).getLose();
+			double c = ((Pitcher) pit).getDefence();
+			str= "1-"+getNumber()+"-"+getName()+ "-"+getAge()+"-"+getHeight()+"-"+a+"-"+b+"-"+c;
+		}else {
+			int a = ((Batter) bat).getBatcount();
+			int b = ((Batter) bat).getHit();
+			double c = ((Batter) bat).getHitAvg();
+			str="2-"+getNumber()+"-"+getName()+ "-"+getAge()+"-"+getHeight()+"-"+a
+					+"-"+b+"-"+c; 
+		}
+		
+		return str;
+	}
 	public void returnInfo() {
 		if(type==1) {//pit
 			 

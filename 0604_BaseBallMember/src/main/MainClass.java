@@ -25,7 +25,7 @@ public class MainClass {
 			System.out.println("\t\t   Menu");
 			System.out.println("=========================================");
 			System.out.println("1. 선수추가\t2. 선수삭제\t3. 선수검색");
-			System.out.println("4. 정보수정\t5. 전체출력");
+			System.out.println("4. 정보수정\t5. 전체출력\t6. 데이터저장");
 			System.out.println("=========================================");
 			System.out.println("원하는메뉴를 입력하세요 >>");
 			int a = sc.nextInt();
@@ -45,6 +45,9 @@ public class MainClass {
 					break;
 				case 5:
 					memdao.allprint();
+					break;
+				case 6:
+					memdao.dataSave();
 					break;
 				default:
 					loopEnd = false;

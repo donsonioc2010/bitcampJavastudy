@@ -1,18 +1,34 @@
 package FileIO;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
-
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import dao.MemberDao;
 import dto.Human;
 
 public class File  {
 	
-	public void dataWrite() {
+	public void dataWrite(Human infoh) {
+		String path = "D:\\tmp\\baseinfo.txt";
+		String str = infoh.getinfo();
+		try {
+			FileWriter fw = new FileWriter(path,true);
+			BufferedWriter bw = new BufferedWriter(fw);
+			PrintWriter pw = new PrintWriter(bw);
+
+			pw.println(str);
+			pw.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
 	
-	public static MemberDao dataLoad() {
+	public static 
+	MemberDao dataLoad() {
 		String infoLine = "";
 		String strAry[] = null;
 		String infoSplit[]=null;

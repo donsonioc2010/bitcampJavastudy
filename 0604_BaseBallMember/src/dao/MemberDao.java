@@ -2,6 +2,7 @@ package dao;
 
 import java.util.Scanner;
 
+import FileIO.File;
 import dto.Human;
 
 
@@ -18,7 +19,14 @@ public class MemberDao {
 			
 		}
 	}
-	
+	public void dataSave() {
+		File savefile = new File();
+		for(int i = infoh.length-1; i>-1; i--) {
+			if(!infoh[i].getName().equals("")) {
+				savefile.dataWrite(infoh[i]);
+			}
+		}
+	}
 	public MemberDao(int count) {
 		infoh = new Human[count+30];
 		for(int i =0;i<infoh.length;i++) {
