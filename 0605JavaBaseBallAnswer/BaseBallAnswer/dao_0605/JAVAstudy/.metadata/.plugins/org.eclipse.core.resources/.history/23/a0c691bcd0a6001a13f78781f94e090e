@@ -1,0 +1,13 @@
+package dto;
+	//DTO
+public class Human {
+	private int number;
+	private String name;
+	private int age;
+	private double height;
+	
+	
+	
+	
+	
+}

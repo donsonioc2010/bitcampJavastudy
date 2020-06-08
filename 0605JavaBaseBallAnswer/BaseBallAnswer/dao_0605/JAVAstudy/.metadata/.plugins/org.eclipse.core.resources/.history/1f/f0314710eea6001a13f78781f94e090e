@@ -1,0 +1,31 @@
+package File;
+
+import java.io.File;
+
+public class FileProc {
+	private File file;
+	
+	public FileProc(String filename) {
+		file = new File("d:\\tmp\\"+filename+".txt");
+	}
+	
+	public void createFile() {
+		try {
+			if(file.createNewFile()) {
+				System.out.println("파일 생성 성공");
+			}else {
+				System.out.println("파일 생성 실패");
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public String[] loadData() {
+		
+	}
+	public void saveData(String[] datas) {
+		
+	}
+	
+	
+}

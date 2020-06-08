@@ -1,0 +1,45 @@
+package main;
+
+import java.util.Scanner;
+
+import dao.MemberDao;
+
+public class MainClass {
+
+	public static void main(String[] args) {		 
+		Scanner sc = new Scanner(System.in);
+		MemberDao dao = new MemberDao();
+		
+		// menu 구성	== front end -> View
+				
+		// 1. 선수 추가
+		while(true) {
+			System.out.println("1. 선수등록");
+			System.out.println("2. 선수삭제");
+			System.out.println("3. 선수검색");
+			System.out.println("4. 선수수정");
+			System.out.println("5. 선수 모두 출력");
+			
+			System.out.print("메뉴번호입력 >>>");
+			int choice = sc.nextInt();
+			
+			
+			
+			
+			
+			
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

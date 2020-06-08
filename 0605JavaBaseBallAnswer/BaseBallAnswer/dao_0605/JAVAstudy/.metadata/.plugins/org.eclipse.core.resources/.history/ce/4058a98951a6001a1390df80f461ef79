@@ -1,0 +1,129 @@
+package dao;
+
+import java.util.Scanner;
+
+import FileIO.File;
+import dto.Human;
+
+
+//Data Access Object == BackEnd
+public class MemberDao {
+	Scanner sc = new Scanner(System.in);
+	Human infoh[];
+	//배열을 잡으시오
+	public MemberDao() {
+		infoh = new Human[30];
+		for(int i =0;i<infoh.length;i++) {
+			infoh[i] = new Human();
+			infoh[i].setName("");
+			
+		}
+	}
+	public void dataSave() {
+		File savefile = new File();
+		for(int i = infoh.length-1; i==0; i--) {
+			if(!infoh[i].getName().equals("")) {
+				savefile.dataWrite(infoh[i]);
+			}
+		}
+	}
+	public MemberDao(int count) {
+		infoh = new Human[count+30];
+		for(int i =0;i<infoh.length;i++) {
+			infoh[i] = new Human();
+			infoh[i].setName("");
+		}
+	}
+
+	public void insert() {
+		//추가 
+		//빈방찾기
+		int index=-1;
+		for(int i = 0; i<infoh.length; i++) {
+			if(infoh[i].getName().equals("")) {
+				index = i;
+			}
+		}
+		
+		
+		System.out.println("투수(1)/타자(2)를 입력하십시오 >>");
+		int type = sc.nextInt();
+		String humanInfo = "";
+		if(type ==1) {
+			System.out.println("선수번호-이름-나이-신장-승-패-방어율을 입력하십시오");
+			humanInfo = sc.next();
+		}
+		else {
+			System.out.println("선수번호-이름-나이-신장-타수-히트수-타율을 입력하십시오");
+			humanInfo = sc.next();
+		}
+		humanInfo = type+"-"+humanInfo;
+		
+		splitStr(humanInfo,index);
+		
+		
+	}
+	public void delete() {
+		//선수삭제
+		System.out.println("삭제를 원하는 선수이름을 입력하십시오");
+		String str = sc.next();
+		
+		for(int i = 0; i<infoh.length;i++) {
+			if(infoh[i].getName().equals(str)) {
+				infoh[i]=new Human(0,0,"",0,0,0,0,0);
+				break;
+			}
+		}
+	}
+	public void select() {
+		//지정선수 정보
+		System.out.println("정보를 확인하려는 선수이름를 입력하십시오");
+		String str = sc.next();
+		for(int i = 0; i<infoh.length;i++) {
+			if(infoh[i].getName().equals(str)) {
+				System.out.println(toString());
+				break;
+			}
+		}
+		
+	}
+	public void update() {
+		//선수정보 수정
+		System.out.println("수정을 원하는 선수정보를 입력하십시오");
+		String str = sc.next();
+		int index = -1;
+		for(int i = 0; i<infoh.length;i++) {
+			if(infoh[i].getName().equals(str)) {
+				index = i;
+				System.out.println("선택한 선수의 정보를 찾았습니다.");
+				System.out.println("수정할 정보를 입력해 주세요");
+				System.out.println("투수(1)/타자(2)-선수번호-이름-나이-신장-승(타수)-패(히트수)-방어율(타율)");
+				str = sc.next();
+				splitStr(str, index);
+				break;
+			}else {
+				System.out.println("입력한 선수의 정보가 없습니다");
+			}
+		}
+	}
+	public void allprint() {
+		for(int i = 0; i<infoh.length;i++)
+			if(!infoh[i].getName().equals("")) {
+				infoh[i].returnInfo();
+			}
+		//전체 출력
+	}
+	public void splitStr(String str,int index) {
+		String huInfo[] = str.split("-");
+		int type = Integer.parseInt(huInfo[0]);
+		int number = Integer.parseInt(huInfo[1]);
+		String name = huInfo[2];
+		int age = Integer.parseInt(huInfo[3]);
+		double height = Double.parseDouble(huInfo[4]);
+		int a = Integer.parseInt(huInfo[5]);
+		int b = Integer.parseInt(huInfo[6]);
+		double c = Double.parseDouble(huInfo[7]);
+		
+		infoh[index]=new Human(type,number,name,age,height,a,b,c);
+	}
+}

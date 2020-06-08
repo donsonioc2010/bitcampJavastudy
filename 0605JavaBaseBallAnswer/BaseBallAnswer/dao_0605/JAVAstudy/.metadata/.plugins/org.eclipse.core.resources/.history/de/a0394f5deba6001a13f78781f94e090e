@@ -1,0 +1,23 @@
+package dto;
+	//DTO
+public class Human {
+	private int number;
+	private String name;
+	private int age;
+	private double height;
+	
+	public Human() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Human(int number, String name, int age, double height) {
+		super();
+		this.number = number;
+		this.name = name;
+		this.age = age;
+		this.height = height;
+	}
+	
+	
+	
+}

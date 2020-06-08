@@ -1,0 +1,95 @@
+package dto;
+
+//Data Transfer Object / Value Object 의 기본 형태 
+public class Human {
+	private int type;
+	private int number; //sequence Number
+	private String name;
+	private int age;
+	private double height;
+	Human pit;
+	Human bat;
+	
+	public Human() {
+
+	}
+
+	public Human(int type,int number, String name, int age, double height,int a,int b,double c) {
+		super();	//정보 입력 및 수정시
+		this.type = type;
+		this.number = number;
+		this.name = name;
+		this.age = age;
+		this.height = height;
+		if(type==1) {
+			 pit = new Pitcher();
+			((Pitcher) pit).setWin(a);
+			((Pitcher) pit).setLose(b);
+			((Pitcher) pit).setDefence(c);
+		}else {
+			bat = new Batter();
+			((Batter) bat).setBatcount(a);
+			((Batter) bat).setHit(b);
+			((Batter) bat).setHitAvg(c);
+		}
+	}
+	public int getNumber() {
+		return number;
+	}
+	public void setNumber(int number) {
+		this.number = number;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public double getHeight() {
+		return height;
+	}
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	public String getinfo() {
+		String str="";
+		if(type ==1) {
+			int a = ((Pitcher) pit).getWin();
+			int b = ((Pitcher) pit).getLose();
+			double c = ((Pitcher) pit).getDefence();
+			str= "1-"+getNumber()+" 이름: "+getName()+ " 나이:"+getAge()+" 신장:"+getHeight()+" 승수:"+a
+					+" 패배수:"+b+" 방어율:"+c;
+		}else {
+			int a = ((Batter) bat).getBatcount();
+			int b = ((Batter) bat).getHit();
+			double c = ((Batter) bat).getHitAvg();
+			str="타입: 타자, 선수번호: "+getNumber()+" 이름: "+getName()+ " 나이:"+getAge()+" 신장:"+getHeight()+" 타수:"+a
+					+" 유효타:"+b+" 타율:"+c; 
+		}
+		
+		return str;
+	}
+	public void returnInfo() {
+		if(type==1) {//pit
+			 
+			int a = ((Pitcher) pit).getWin();
+			int b = ((Pitcher) pit).getLose();
+			double c = ((Pitcher) pit).getDefence();
+			System.out.println( "타입: 투수, 선수번호: "+getNumber()+" 이름: "+getName()+ " 나이:"+getAge()+" 신장:"+getHeight()+" 승수:"+a
+					+" 패배수:"+b+" 방어율:"+c);
+		}else {
+			int a = ((Batter) bat).getBatcount();
+			int b = ((Batter) bat).getHit();
+			double c = ((Batter) bat).getHitAvg();
+			System.out.println("타입: 타자, 선수번호: "+getNumber()+" 이름: "+getName()+ " 나이:"+getAge()+" 신장:"+getHeight()+" 타수:"+a
+					+" 유효타:"+b+" 타율:"+c); 
+		}
+	}
+	
+}

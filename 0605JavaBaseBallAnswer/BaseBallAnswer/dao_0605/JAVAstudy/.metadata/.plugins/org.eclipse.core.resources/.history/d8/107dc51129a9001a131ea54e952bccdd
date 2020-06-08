@@ -1,0 +1,10 @@
+package ArrayList_Main;
+
+public class ArrayList_MainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

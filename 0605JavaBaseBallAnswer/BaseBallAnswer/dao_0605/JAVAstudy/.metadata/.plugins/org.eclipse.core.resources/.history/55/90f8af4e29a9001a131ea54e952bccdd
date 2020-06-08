@@ -1,0 +1,26 @@
+package ArrayList_Main;
+
+public class ArrayList_MainClass {
+
+	public static void main(String[] args) {
+		/*
+		 	Collection : 수집
+		 	
+		 	
+		 	List : 목록
+		 			데이터의 관리를 유동적으로 할수 있는 배열
+		 			
+		 			1. ArrayList (==Vector)
+		 			
+		 				
+		 			2. LinkedList
+		 				
+		 				
+		 			3.Map(Collection)
+		 				HashMap
+		 				
+		 				TreeMap
+		 */
+	}
+
+}

@@ -1,0 +1,19 @@
+package File;
+
+public class FileProc {
+	public FileProc() {
+	
+	}
+	
+	public void CreateFile() {
+		
+	}
+	public void loadData() {
+		
+	}
+	public void saveData() {
+		
+	}
+	
+	
+}

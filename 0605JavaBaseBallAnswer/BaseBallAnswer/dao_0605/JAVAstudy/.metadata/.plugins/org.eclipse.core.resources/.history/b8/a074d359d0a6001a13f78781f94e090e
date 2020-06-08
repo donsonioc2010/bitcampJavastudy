@@ -1,0 +1,8 @@
+package dto;
+
+public class Pitcher {
+	private int win;
+	private int lose;
+	private double defence; //0.0~10.0
+		
+}

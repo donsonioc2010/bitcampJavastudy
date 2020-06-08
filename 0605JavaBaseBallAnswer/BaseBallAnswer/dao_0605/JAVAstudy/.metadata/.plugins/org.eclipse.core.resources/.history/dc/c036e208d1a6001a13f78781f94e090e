@@ -1,0 +1,15 @@
+package dto;
+	//DTO
+public class Human {
+	private int number;
+	private String name;
+	private int age;
+	private double height;
+	
+	public Human() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+}

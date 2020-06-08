@@ -1,0 +1,23 @@
+package File;
+
+import java.io.File;
+
+public class FileProc {
+	private File file;
+	
+	public FileProc(String filename) {
+		file = new file("d:\\tmp\\"+filename+".txt");
+	}
+	
+	public void createFile() {
+		if(file.createNewFile())
+	}
+	public String[] loadData() {
+		
+	}
+	public void saveData(String[] datas) {
+		
+	}
+	
+	
+}

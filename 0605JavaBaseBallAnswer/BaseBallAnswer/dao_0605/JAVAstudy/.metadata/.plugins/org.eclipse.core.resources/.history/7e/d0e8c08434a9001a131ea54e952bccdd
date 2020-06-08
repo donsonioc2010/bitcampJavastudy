@@ -1,0 +1,13 @@
+package ArrayList_Main;
+
+public class MemberDto_ArrayList {
+	private int number;
+	private String name;
+	
+	public MemberDto_ArrayList() {
+		// TODO Auto-generated constructor stub
+	}
+	public MemberDto_ArrayList(int number, String name) {
+		
+	}
+}

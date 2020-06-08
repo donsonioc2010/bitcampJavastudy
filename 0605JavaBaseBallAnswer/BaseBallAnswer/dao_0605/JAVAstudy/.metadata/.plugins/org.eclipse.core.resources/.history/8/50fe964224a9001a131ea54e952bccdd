@@ -1,0 +1,24 @@
+package GenericMain;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		/*
+		 	Generic  == Template(형태) 
+		 			: 자료형의 변수 
+		 			
+		 */
+		
+		
+	}
+
+}
+		//<이름> 사용자가 지정 Generic
+class Box<T>{
+	T temp;
+	
+	public Box(T temp) {
+		this.temp = temp;
+		
+	}
+}

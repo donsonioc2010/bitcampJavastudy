@@ -1,0 +1,19 @@
+package File;
+
+public class FileProc {
+	public FileProc(String filename) {
+	
+	}
+	
+	public void CreateFile() {
+		
+	}
+	public String[] loadData() {
+		
+	}
+	public void saveData(String[] datas) {
+		
+	}
+	
+	
+}

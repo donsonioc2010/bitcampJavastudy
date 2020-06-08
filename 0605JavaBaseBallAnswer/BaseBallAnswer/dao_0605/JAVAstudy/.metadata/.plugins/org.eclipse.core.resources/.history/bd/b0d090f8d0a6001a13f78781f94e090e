@@ -1,0 +1,40 @@
+package dto;
+
+public class Better {
+	private int batcount; //타수
+	private int hit;
+	private double hitAvg; //타율 0.0~1.0
+	
+	
+	public Better() {
+		
+	}
+	
+	public Better(int batcount, int hit, double hitAvg) {
+		super(number,name,age,height);//기본생성자가아닌 매개변수가 있는 생성자를 가져옴
+		this.batcount = batcount;
+		this.hit = hit;
+		this.hitAvg = hitAvg;
+	}
+	public int getBatcount() {
+		return batcount;
+	}
+	public void setBatcount(int batcount) {
+		this.batcount = batcount;
+	}
+	public int getHit() {
+		return hit;
+	}
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
+	public double getHitAvg() {
+		return hitAvg;
+	}
+	public void setHitAvg(double hitAvg) {
+		this.hitAvg = hitAvg;
+	}
+	
+	
+	
+}

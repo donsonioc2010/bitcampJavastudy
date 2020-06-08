@@ -1,0 +1,8 @@
+package dto;
+
+public class Better {
+	private int batcount; //타수
+	private int hit;
+	private double hitAvg; //타율 0.0~1.0
+	
+}
