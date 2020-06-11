@@ -2,6 +2,7 @@ package BlackJackWindow;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
 import java.io.*;
 
 import javax.imageio.ImageIO;
@@ -18,20 +19,18 @@ public class BJWindow extends JFrame implements WindowListener{
 	
 	public BJWindow() {
 		super("BlackJack");
-		setBounds(100,100,640,480);
+		setBounds(100,100,1080,720);
 		setVisible(true);
 		setLayout(new FlowLayout());
-		
 		b1 = new Button("randomNumber;");
 		add(b1);
-
+		img1 = new JLabel("이미지레이블");
+		add(img1);
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int CardNumber = (int)(Math.random()*52); //%13 = 12 == k
-				b1.setLabel(CardNumber+"");
 				GetImg(getCardImg(CardNumber));
-				img1 = new JLabel(new ImageIcon(image));
-				add(img1);
+
 			}
 		});
 		
@@ -42,13 +41,18 @@ public class BJWindow extends JFrame implements WindowListener{
 		
 	}
 	public void GetImg(String path) {
-		path= "D:/JAVAstudy/BlackJack/src/CardImage/"+path+".gif";
+		path= "src\\img\\"+path+".png";
 		//File imagePath = new File(path);
+		BufferedImage imgbuf = null;
 		try {
-			image = ImageIO.read(new File(path));
+			imgbuf = ImageIO.read(new File(path));
+			imgbuf.getScaledInstance(50,50,Image.SCALE_DEFAULT);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		img1.setIcon(new ImageIcon(imgbuf));
+		img1.setText("");
+		
 	}
 	
 	public String getCardImg(int i) {
