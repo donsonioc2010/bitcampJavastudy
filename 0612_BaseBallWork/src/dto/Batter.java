@@ -1,16 +1,16 @@
-package dto_0605;
+package dto;
 
-public class Batter_0608 extends Human_0608 {
+public class Batter extends Human {
 
 	private int batcount;
 	private int hit;
 	private double hitAvg;	// 0.0 ~ 1.0
 	
-	public Batter_0608() {
+	public Batter() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Batter_0608(int number, String name, int age, double height, int batcount, int hit, double hitAvg) {
+	public Batter(int number, String name, int age, double height, int batcount, int hit, double hitAvg) {
 		super(number, name, age, height);
 		this.batcount = batcount;
 		this.hit = hit;

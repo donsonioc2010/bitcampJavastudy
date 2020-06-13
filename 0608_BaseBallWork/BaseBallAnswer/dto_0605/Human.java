@@ -1,17 +1,17 @@
 package dto_0605;
 
 // Data Transfer Object, Value Object 
-public class Human_0608 {
+public class Human {
 
 	private int number;	// sequence number
 	private String name;
 	private int age;
 	private double height;
 	
-	public Human_0608() {
+	public Human() {
 	}
 
-	public Human_0608(int number, String name, int age, double height) {
+	public Human(int number, String name, int age, double height) {
 		super();
 		this.number = number;
 		this.name = name;

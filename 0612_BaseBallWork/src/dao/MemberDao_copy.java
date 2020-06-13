@@ -1,47 +1,33 @@
-package dao_0605;
+package dao;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import File_0605.FileProc_0608;
-import dto_0605.Batter;
-import dto_0605.Human;
-import dto_0605.Pitcher;
+import File.FileProc;
+import dto.Batter;
+import dto.Human;
+import dto.Pitcher;
 
-// Data Access Object	= model == back end
-public class MemberDao_0608 {
+public class MemberDao_copy {
 	
 	Scanner sc = new Scanner(System.in);
-	
-	// 배열
-	//private Pitcher pitcher[];
-	//private Batter batter[];
-//	private Human_0605 human[]=new Human_0605[20];;
-	//ArrayList 
-	//Generic == Human
-	
 	private ArrayList<Human> HumanList = new ArrayList<Human>();
 	private int memberNumber= 1000;
-//	private int memberCount;
 	private Human ha[];
-	FileProc_0608 fp;
+	FileProc fp;
 	public void copy() {
 		
 	}
 	
-	public MemberDao_0608() {
-		fp = new FileProc_0608("baseball");
+	public MemberDao_copy() {
+		fp = new FileProc("baseball");
 		fp.createFile();
-		//human = new Human[20];	// 변수 20개 생성
-
-		// human = new Human();	// 객체 생성
 	}	
 	public void insert() {	
-		// 투수/타자 ?
 		System.out.print("투수(1)/타자(2) = ");
 		int pos = sc.nextInt();
+
 		
-		// human
 		System.out.print("이름 = ");
 		String name = sc.next();
 		

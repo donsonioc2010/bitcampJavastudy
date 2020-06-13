@@ -1,15 +1,15 @@
 package dto_0605;
 
-public class Pitcher_0608 extends Human_0608 {
+public class Pitcher extends Human {
 
 	private int win;
 	private int lose;
 	private double defence;	// 0.0 ~ 10.0
 	
-	public Pitcher_0608() {
+	public Pitcher() {
 	}
 
-	public Pitcher_0608(int number, String name, int age, double height, int win, int lose, double defence) {
+	public Pitcher(int number, String name, int age, double height, int win, int lose, double defence) {
 		super(number, name, age, height);
 		this.win = win;
 		this.lose = lose;
