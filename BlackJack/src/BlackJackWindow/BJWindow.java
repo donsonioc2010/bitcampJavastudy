@@ -24,6 +24,7 @@ public class BJWindow extends JFrame implements WindowListener{
 		add(b1);
 		img1 = new JLabel("이미지레이블");
 		add(img1);
+		
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int CardNumber = (int)(Math.random()*52); //%13 = 12 == k
@@ -31,8 +32,6 @@ public class BJWindow extends JFrame implements WindowListener{
 
 			}
 		});
-		
-		
 		
 		addWindowListener(this);
 		
